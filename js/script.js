@@ -31,3 +31,25 @@ if(playerInput == '1'){
 
 printMessage('Twój ruch to: ' + playerMove);
 
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+} else if( computerMove == 'papier' && playerMove == 'nożyce'){
+  printMessage('Ty wygrywasz!');
+} else if( computerMove == 'nożyce' && playerMove == 'kamień'){
+  printMessage('Ty wygrywasz!');
+} else if( computerMove == 'kamień' && playerMove == 'kamień'){
+  printMessage('Remis!');
+} else if( computerMove == 'papier' && playerMove == 'papier'){
+  printMessage('Remis!');
+} else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
+  printMessage('Remis!');
+} else if( computerMove == 'kamień' && playerMove == 'nieznany ruch'){
+  printMessage('Nieznany ruch, spróbuj jeszcze raz!');
+} else if( computerMove == 'papier' && playerMove == 'nieznany ruch'){
+  printMessage('Nieznany ruch, spróbuj jeszcze raz!');
+} else if( computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
+  printMessage('Nieznany ruch, spróbuj jeszcze raz!');
+} else(){printMessage(`Przegrałeś! Spróbuj ponownie!`)}  
+
+//Rozpatrzyłam sytuacje, w których wygrywa gracz, w których jest remis, bądź nieznany ruch. Czy można za pomocą else napisać, pozostałe możliwości, czyli wygraną komputera? Na zasadzie, że jeśli wszystkie poprzednie warunki nie zostają spełnione to wtedy else -> wygrana komputera. W dodatku else bez wpisania w środku warunków (czyli computerMove/playerMove)
