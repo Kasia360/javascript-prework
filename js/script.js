@@ -4,13 +4,24 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = 'nieznany ruch';
 
-if(randomNumber == 1){
+let computerMove = getMoveName(randomNumber);
+
+function getMoveName(randomNumber){
+   if(randomNumber == 1){
+    return 'kamień';
+ } if(randomNumber == 2){
+    return 'papier';
+ } if(randomNumber == 3){
+    return 'nożyce';
+ }
+
+/* if(randomNumber == 1){
   computerMove = 'kamień';
 } else if (randomNumber == 2){
   computerMove = 'papier';
 } else if (randomNumber == 3){
   computerMove = 'nożyce';
-}
+} */
 
 printMessage('Mój ruch to: ' + computerMove);
 
@@ -50,6 +61,5 @@ if( computerMove == 'kamień' && playerMove == 'papier'){
   printMessage('Nieznany ruch, spróbuj jeszcze raz!');
 } else if( computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
   printMessage('Nieznany ruch, spróbuj jeszcze raz!');
-} else(){printMessage(`Przegrałeś! Spróbuj ponownie!`)}  
+} else(){printMessage(`Przegrałeś! Spróbuj ponownie!`)} 
 
-//Rozpatrzyłam sytuacje, w których wygrywa gracz, w których jest remis, bądź nieznany ruch. Czy można za pomocą else napisać, pozostałe możliwości, czyli wygraną komputera? Na zasadzie, że jeśli wszystkie poprzednie warunki nie zostają spełnione to wtedy else -> wygrana komputera. W dodatku else bez wpisania w środku warunków (czyli computerMove/playerMove)
