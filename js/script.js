@@ -1,3 +1,7 @@
+function playGame(playerInput){
+
+clearMessages();
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
@@ -26,11 +30,11 @@ console.log('wybrana opcja przez komputer to: ' + argComputerMove);
 
 printMessage('Mój ruch to: ' + argComputerMove);
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+/*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let argPlayerMove = 'nieznany ruch';
+let argPlayerMove = 'nieznany ruch'; 
 
 /*if(playerInput == '1'){
   playerMove = 'kamień';
@@ -67,3 +71,16 @@ if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
   printMessage('Nieznany ruch, spróbuj jeszcze raz!');
 } else{printMessage`Przegrałeś! Spróbuj ponownie!`} 
 }
+
+}
+
+document.getElementById('play-rock').addEventListener('click', function(){
+  playGame(1);
+});
+
+document.getElementById('play-paper').addEventListener('click', function(){
+  playGame(2);
+});
+
+document.getElementById('play-scissors').addEventListener('click', function(){
+  playGame(3);
