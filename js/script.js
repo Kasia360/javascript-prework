@@ -41,6 +41,8 @@ let argPlayerMove = 'nieznany ruch';
 } */
 
 
+console.log('Wybrana wartość to: ' + argPlayerMove);
+
 printMessage('Twój ruch to: ' + argPlayerMove);
 
 
