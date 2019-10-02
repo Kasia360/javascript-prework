@@ -1,42 +1,45 @@
 function getMoveName(number){
-   if(number == 1){
+  if(number == 1){
     return 'kamień';
- } if(number == 2){
+ }
+  if(number == 2){
     return 'papier';
- } if(number == 3){
+ }
+  if(number == 3){
     return 'nożyce';
  }
 }
 
 function displayResult(argComputerMove, argPlayerMove){
   if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-  printMessage('Ty wygrywasz!');
+    printMessage('Ty wygrywasz!');
 }
   else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-  printMessage('Ty wygrywasz!');
+    printMessage('Ty wygrywasz!');
 }
   else if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-  printMessage('Ty wygrywasz!');
+    printMessage('Ty wygrywasz!');
 }
   else if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-  printMessage('Remis!');
+    printMessage('Remis!');
 }
   else if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
-  printMessage('Remis!');
+    printMessage('Remis!');
 }
   else if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
-  printMessage('Remis!');
+    printMessage('Remis!');
 }
   else if( argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch'){
-  printMessage('Nieznany ruch, spróbuj jeszcze raz!');
+    printMessage('Nieznany ruch, spróbuj jeszcze raz!');
 }
   else if( argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch'){
-  printMessage('Nieznany ruch, spróbuj jeszcze raz!');
+    printMessage('Nieznany ruch, spróbuj jeszcze raz!');
 }
   else if( argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch'){
-  printMessage('Nieznany ruch, spróbuj jeszcze raz!');
+    printMessage('Nieznany ruch, spróbuj jeszcze raz!');
 }
-  else{printMessage`Przegrałeś! Spróbuj ponownie!`}
+  else
+    {printMessage`Przegrałeś! Spróbuj ponownie!`}
 }
 
 function playGame(playerInput){
@@ -51,10 +54,10 @@ function playGame(playerInput){
   if(randomNumber == 1){
     computerMove = 'kamień';
 	}
-    else if (randomNumber == 2){
+  else if (randomNumber == 2){
     computerMove = 'papier';
 	}
-    else if (randomNumber == 3){
+  else if (randomNumber == 3){
     computerMove = 'nożyce';
   }
   */
