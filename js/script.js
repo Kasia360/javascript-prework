@@ -10,7 +10,7 @@ function getMoveName(number){
     return 'nożyce';
  }
 }
-
+//losowanie//
 const displayResult = function(argComputerMove, argPlayerMove){
   if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
     printMessage('Ty wygrywasz!');
